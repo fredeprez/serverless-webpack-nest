@@ -1,0 +1,70 @@
+{
+	"extends": [
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:jest/recommended",
+		"plugin:prettier/recommended",
+		"prettier/standard"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["simple-import-sort", "import", "jest", "@typescript-eslint", "prettier"],
+	"rules": {
+		"prettier/prettier": "error",
+		// GENERAL
+		"no-unused-vars": [
+			"error",
+			{
+				"ignoreRestSiblings": true
+			}
+		],
+		"no-undef": "error",
+		"lines-between-class-members": [
+			"error",
+			"always",
+			{
+				"exceptAfterSingleLine": true
+			}
+		],
+		"no-return-await": "error",
+		"no-console": "error",
+		// IMPORTS
+		"simple-import-sort/sort": "error",
+		"sort-imports": "off",
+		"import/first": "error",
+		"import/newline-after-import": "error",
+		"import/no-duplicates": "error",
+		"import/no-unresolved": "warn",
+		// WARNINGS
+		"@typescript-eslint/no-unsafe-return": "warn",
+		"@typescript-eslint/no-unsafe-call": "warn",
+		"@typescript-eslint/ban-types": "warn",
+		"@typescript-eslint/no-unsafe-member-access": "warn",
+		"@typescript-eslint/no-unsafe-assignment": "warn",
+		// TO BE FIXED
+		"@typescript-eslint/unbound-method": "warn",
+		// IGNORE
+		"jest/valid-title": "off"
+	},
+	"root": true,
+	"ignorePatterns": ["**/webpack.ts"],
+	"env": {
+		"es6": true,
+		"node": true,
+		"commonjs": true
+	},
+	"settings": {
+		"import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	}
+}

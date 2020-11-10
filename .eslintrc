@@ -3,7 +3,6 @@
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
-		"plugin:jest/recommended",
 		"plugin:prettier/recommended",
 		"prettier/standard"
 	],
@@ -11,7 +10,7 @@
 	"parserOptions": {
 		"project": "./tsconfig.json"
 	},
-	"plugins": ["simple-import-sort", "import", "jest", "@typescript-eslint", "prettier"],
+	"plugins": ["simple-import-sort", "import", "@typescript-eslint", "prettier"],
 	"rules": {
 		"prettier/prettier": "error",
 		// GENERAL
@@ -46,8 +45,6 @@
 		"@typescript-eslint/no-unsafe-assignment": "warn",
 		// TO BE FIXED
 		"@typescript-eslint/unbound-method": "warn",
-		// IGNORE
-		"jest/valid-title": "off"
 	},
 	"root": true,
 	"ignorePatterns": ["**/webpack.ts"],

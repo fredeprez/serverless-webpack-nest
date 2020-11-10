@@ -7,8 +7,7 @@
 	"repository": "github.com/fredeprez/serverless-webpack-nest",
 	"workspaces": {
 		"packages": [
-			"services/*",
-			"infrastructure"
+			"services/*"
 		]
 	},
 	"scripts": {
